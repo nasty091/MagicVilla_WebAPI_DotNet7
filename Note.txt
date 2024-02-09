@@ -1,0 +1,6 @@
+_DTO hay tên gọi đầy đủ là Data Tranfer Object là một design pattern lần đầu tiên được giới thiệu bởi Martin Fowler trong cuốn sách EAA. 
+Mục đích sử dụng chính của DTO đó là giảm số lần gọi các method giữa các tiến trình xử lý.
+
+https://shareprogramming.net/dto-la-gi-dung-dto-trong-nhung-truong-hop-nao/
+
+---------------------------------------------------------------------------------------------------------
