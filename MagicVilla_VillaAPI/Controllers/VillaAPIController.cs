@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MagicVilla_VillaAPI.Controllers
 {
     [Route("api/VillaAPI")] //[Route("api/[controller]")]
-    [ApiController]
+    [ApiController] // Don't have this data annotation, validation in model will not be active
     public class VillaAPIController : ControllerBase
     {
         [HttpGet]
@@ -45,7 +45,12 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult<VillaDTO> CreateVilla([FromBody]VillaDTO villaDTO)
         {
-            if(villaDTO == null)
+            //Use this code instead of [ApiController]
+            //if(ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+            if (villaDTO == null)
             {
                 return BadRequest(villaDTO);
             }
