@@ -1,6 +1,13 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
+//    .WriteTo.File("log/villaLogs.txt", rollingInterval:RollingInterval.Day).CreateLogger(); //File .txt will be changed every day
+
+//builder.Host.UseSerilog(); // Application use serilog instead of console
 
 builder.Services.AddControllers(option =>
 {                                       // Return error if the content-type in header of request is not json (json is an default type in api)
