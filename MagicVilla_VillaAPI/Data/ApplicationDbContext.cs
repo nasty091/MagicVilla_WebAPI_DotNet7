@@ -7,6 +7,7 @@ namespace MagicVilla_VillaAPI.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) // Pass the ConnectionString to DbContext
         { 
+
         }
 
         public DbSet<Villa> Villas { get; set; }

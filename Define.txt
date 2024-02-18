@@ -1,1 +1,3 @@
 _Postman là công cụ test api
+
+_Các câu lệnh(code) trong Migrations gọi là câu lệnh liên kết (link statements)
