@@ -11,19 +11,22 @@ namespace MagicVilla_VillaAPI.Controllers
     [ApiController] // Don't have this data annotation, validation in model will not be active
     public class VillaAPIController : ControllerBase
     {
-        private readonly ILogging _logger;
+        //private readonly ILogging _logger;
 
-        public VillaAPIController(ILogging logger) 
+        //public VillaAPIController(ILogging logger) 
+        //{
+        //    _logger = logger;
+        //}
+
+        public VillaAPIController(ILogging logger)
         {
-            _logger = logger;
         }
-
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
-            _logger.Log("Getting all villas", "");
+            //_logger.Log("Getting all villas", "");
             return Ok(VillaStore.villaList);
         }
 
@@ -38,7 +41,7 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             if (id == 0)
             {
-                _logger.Log("Get Villa Error with Id " + id, "error");
+                //_logger.Log("Get Villa Error with Id " + id, "error");
                 return BadRequest();
             }
 
