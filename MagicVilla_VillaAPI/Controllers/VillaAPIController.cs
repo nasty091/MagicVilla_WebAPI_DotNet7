@@ -171,7 +171,7 @@ namespace MagicVilla_VillaAPI.Controllers
         {
             if (patchDTO == null || id == 0)
             {
-                return BadRequest();equals 
+                return BadRequest();
             }
 
             var villa = _db.Villas.FirstOrDefault(u => u.Id == id);
